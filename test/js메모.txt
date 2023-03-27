@@ -1,0 +1,7 @@
+`(백틱)으로 감쌈 : 보관법
+```js
+let myName = "Heropy";
+let hello = `HEllo ${myName}?!`
+
+console.log(hello); // Hello Heropy?!
+```

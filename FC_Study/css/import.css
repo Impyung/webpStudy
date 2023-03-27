@@ -1,0 +1,6 @@
+@import url('./import_2.css');
+div {
+  font-size: 20px;
+  text-decoration: underline;
+}
+/* 주석은 css에서도 ctrl+/ */

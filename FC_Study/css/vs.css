@@ -1,0 +1,19 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+.box::before {
+  content: '';
+}
+.box::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+}
+
+/* 인라인 요소는 가로 세로 값 적용 X 
+블럭요소로 바꾸기 위해서는 display를 달아줘야함*/

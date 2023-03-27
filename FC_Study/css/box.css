@@ -1,0 +1,26 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  transition: 1s;
+}
+.box:focus {
+  /* hover는 가상 클래스 선택자 
+  가상 클래스 선택자 : 어떤 행동을 했을 때 동작
+  active 등등 가능*/
+  width: 300px;
+  background: royalblue;
+}
+input {
+}
+input:focus {
+  background: grey;
+}
+
+/* .box:hover { 
+        hover는 가상 클래스 선택자 
+        가상 클래스 선택자 : 어떤 행동을 했을 때 동작
+    active 등등 가능
+    width: 300px;
+    background: royalblue;
+  }*/

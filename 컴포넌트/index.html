@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link defer rel="stylesheet" href="./src/index.js" />
+
+    <style>
+      .block > * {
+        margin: 0.5rem 0.3rem;
+      }
+    </style>
+    <title>Components</title>
+  </head>
+  <body>
+    <!-- button -->
+    <div
+      class="block vtmn-flex vtmn-flex-row vtmn-flex-wrap"
+      style="display: flex; flex-direction: row; align-items: center"
+    >
+      <button class="vtmn-btn">Button</button>
+    </div>
+    <!-- dropDown&checkBox -->
+    <div class="block">
+      <div class="vtmn-dropdown">
+        <label id="dropdown-label-1">Label</label>
+        <details>
+          <summary aria-labelledby="dropdown-label-1">Dropdown</summary>
+          <div
+            class="vtmn-dropdown_items"
+            role="group"
+            aria-labelledby="dropdown-label-1"
+          >
+            <input type="checkbox" name="dropdown-1" id="dropdown-1-opt-1" />
+            <label for="dropdown-1-opt-1">Dropdown Option</label>
+
+            <input type="checkbox" name="dropdown-1" id="dropdown-1-opt-2" />
+            <label for="dropdown-1-opt-2">Dropdown Option</label>
+          </div>
+        </details>
+      </div>
+    </div>
+    <!-- select -->
+    <div class="block">
+      <div class="vtmn-select_container">
+        <label for="my-select">Label</label>
+
+        <select
+          name="sports"
+          id="my-select"
+          autocomplete="on"
+          class="vtmn-select--error"
+          aria-describedby="select-helper-1"
+          aria-invalid="true"
+        >
+          <option value="" disabled selected>Select</option>
+          <option value="gymnastics">Gymnastics</option>
+          <option value="archery">Archery</option>
+          <option value="climbing">Climbing</option>
+        </select>
+      </div>
+    </div>
+    <!--textInput -->
+    <div class="block">
+      <div>
+        <label class="vtmn-text-input_label" for="overview-input-1"
+          >Label</label
+        >
+        <div class="vtmn-text-input_container">
+          <input
+            type="text"
+            class="vtmn-text-input"
+            id="overview-input-1"
+            placeholder="Placeholder"
+            aria-describedby="overview-input-helper-1"
+          />
+        </div>
+      </div>
+    </div>
+    <!--  -->
+  </body>
+</html>

@@ -1,0 +1,9 @@
+.container {
+}
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
+  margin: 15px 20px 15px 20px;
+  border-radius: 10px;
+}

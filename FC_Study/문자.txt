@@ -1,0 +1,236 @@
+` : 백틱(Backtick), 그레이브(Grave)
+~ : 틸드(Tilde)
+@ : At sign
+^ : 캐럿(Caret)
+& : 엠퍼센드(Ampersand)
+
+- : 애스터리스크(Asterrisk)
+  " : 쿼테이션
+  (): 퍼렌서시스
+  {}: 브레이스
+  []: 브래킷
+  <>: 앵글 브래킷
+
+ctrl o : 폴더 오픈
+
+! + Enter : html 기본 구조 생성
+
+alt shift f : 파일 전체 코드 정리 ( 기본 규칙에 따라 )
+ctrl k => ctrl f : 지정된 부분만 코드 정리
+ctrl k s : 프로젝트 단위 모두 저장
+
+alt l alt o : 라이브 html
+
+ctrl b : 사이드바 열기 닫기
+ctrl shift p : 모든 메뉴 출력
+ctrl w 닫기
+
+ctrl f : 찾기
+ctrl h : 바꾸기
+
+alt up/down(화살표) : 해당하는 줄 위 아래 이동
+alt shift up/down : 위/아랫줄 복사
+
+태그
+
+- ul(Unordered List) : 순서가 필요없는 목록 집합(블록)
+  ul>li*4
+  ol>li*4
+- li(List) : 목록 내 각 항목(블록)
+- a(Anchor) : 다른/같은 페이지로 이동하는 하이퍼 링크 지정 요소(인라인)
+- span : 특별한 의미가 없는 구분을 위한 요소(인라인)
+- br : 줄바꿈
+- input : 사용자가 데이터 입력(인라인, 블록)
+  -- placeholder : 사용자가 입력할 값(데이터)의 힌트
+  -- disabled : 입력요소 비활성화
+  -- checked : 자동으로 체크 활성화
+  -- radio : radio로 만드는 name 그룹 중 하나만 체크 가능
+- table : 표 요소, 행과 열의 집합(행 -> 열 순서)
+  -- tr(table row) : 행
+  -- td(table data) : 열
+
+전역속성 : 전체의 영역에서 사용 가능한 속성
+
+class : 요소를 지칭하는 중복 가능한 이름
+ex-- <span class="red"> </span>
+id : 요소를 지칭하는 유일한 이름(중복불가)
+
+data : 요소에 데이터 지정
+<태그 data-이름="데이터"></태그>
+
+## css
+
+선택자{ 속성: 값; }
+선택자 : 스타일(css)을 적용할 대상(Selector)
+속성 : 스타일의 종류(Property)
+div {
+color: red;
+margin: 20px;
+}
+margin : 요소 외부 여백
+
+main.css
+
+```css
+@import url("./box.css) ;
+div {
+    color: red;
+    margin: 20px;
+}
+```
+
+box.css
+
+```css
+.box {
+  background-color: red;
+  padding: 20px;
+}
+```
+
+=> 직렬로 연결되는 방식은 연결이 지연되는 단점이 있음
+일반적으로 많이 사용하지는 않음
+
+import는 직렬
+link는 병렬로 연결
+
+\*(전체 선택자) : 모든 요소를 선택
+ABC(태그 선택자) : 태그 이름이 ABC인 요소 선택
+.ABC(클래스 선택자) : HTML class 속성 값이 ABC인 요소 선택
+#ABC(아이디 선택자) : HTML id 속성값이 ABC인 요소 선택
+
+##복합 선택자
+
+ABCXYZ(일치 선택자) : ABC와 XYZ를 동시에 만족하는 요소 선택
+ex --
+span.orange {
+color: red;
+}
+<span class="orange">오렌지</span>
+=> span에 class가 orange인 부분만 바뀌게 됨
+
+ABC>XYZ(자식 선택자) : 선택자 ABC의 자식 요소 XYZ 선택
+ABC XYZ(하위 선택자) : 선택자 ABC의 하위 요소 XYZ 선택
+ex --
+div .orange {
+color: red;
+}
+==> div 태그 하위의 orange란 class를 모두 선택
+
+ABC+XYZ(인접 형제 선택자) : 선택자 ABC의 다음 형제 요소 XYZ 하나를 선택
+Selector.html 참조
+
+ABC~XYZ(일반 형제 선택자) : 선택자 ABC의 다음 형제 요소 XYZ를 모두 선택
+
+##Active
+
+ABC:hover(가상 클래스 선택자) : 선택자 ABC 요소에 마우스 커서가
+올라가 있는 동안 선택
+ABC:active : ABC를 마우스로 클릭하고 있는 동안 선택
+
+ABC:focus : ABC요소가 포커스되면 선택
+ex-- input:focus
+focus는 focus가 가능한 요소에서만 동작
+tabindex="-1"을 추가해서 focus가 되는 요소를 만드는 것이 가능
+
+ABC:first-child : ABC가 형제 요소 중 첫쨰라면 선택.
+<=> ABC:last-child
+ex-- .fruit h3:last-child
+==> last-child가 h3요소여야하며 fruit라는 class의 후손이여야함
+
+ABC:nth-child(n) : ABC가 형제 요소 중 n째라면 선택
+ex --
+
+```HTML
+.fruit *:nth-child(2n) {
+  color: red;
+}
+```
+
+==> fruit라는 class를 가진 후손 요소 중 2의 배수 선택
+n에 n+1, 2n, 2n+1 등 응용가능
+
+ABC:not(XYZ) [부정선택자] : XYZ아닌 ABC 요소 선택
+
+### 가상 요소 선택자
+
+ABC::before : 선택자 ABC요소 내부 앞에 내용(인라인(글자) 요소)을 삽입
+```html
+.box::before {
+  content: "~~~~~";
+}
+```
+==> after도 가능(얘는 뒤에 삽입)
+
+[ABC] : 속성 ABC를 포함한 요소 선택(attribute)
+```html
+[disabled] {
+  color: red;
+}
+```
+[ABC="XYZ"] : 속성 ABC를 포함하고 값이 XYZ인 요소 선택
+```html
+[type="password"] {
+  color: red;
+}
+```
+
+단위 {
+  px : 픽셀
+  % : 상대적 백분율
+  em : 요소의 글꼴 크기
+  rem : 루트 요소(html)의 글꼴 크기
+  vw : 뷰포트 가로 너비의 백분율
+  vh : 뷰포트 세로 너비의 백분율
+}
+
+margin : 요소 외부 여백
+padding : 요소 내부 여백 -> 요소 자체가 커짐
+
+border-radius : 요소의 모서리를 둥글게 깎음
+```html
+border-radius: 10px 10px 10px 10px 
+```
+요소의 좌상단부터 시계방향
+
+box-sizing : 요소의 크기 계산 기준을 지정
+-> 요소의 내용(content)크기로 계산
+
+overflow : 요소의 크기 이상으로 내용이 넘쳤을 때, 보여지는 부분을 제어
+=> 단축속성
+overflow: visible/hidden/scroll/auto;
+overflow-x : x축으로 넘치는 부분만
+overflow-y : y축으로 넘치는 부분만
+
+display : 요소의 화면 출력 특성
+span은 기본적으로 inline 요소지만 display를 통해 요소 전환 가능
+```html
+span {
+  display: block;
+}
+```
+
+opacity : 요소 불투명도(0~1)
+=> 요소는 기본적으로 불투명 따라서 기본값은 1
+
+font-style : 글자의 기울기
+font-weight : 글자의 두께(가중치) [100 ~ 900]
+line-height : 한 줄의 높이(요소의 글꼴크기 배수)
+
+color : 글자의 색상(font나 text 안붙음!)
+
+text-align : 문자의 정렬 방식
+text-decoration : 문자의 장식(선)
+-> none / underline / line-through(중앙선)
+text-indent : 문자 들여쓰기
+-> 내어쓰기는 값을 음수로
+
+position : 요소의 위치 지정 기준
+static : 기준 없음
+relative : 요소 자신을 기준
+absolute : 위치 상 부모 요소를 기준
+fixed : 뷰포트(브라우저) 기준
+```
+top / bottom / left / right / z-index 
+등과 사용.
+```

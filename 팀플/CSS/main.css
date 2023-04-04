@@ -1,0 +1,116 @@
+/* COMMON */
+body {
+  height: 1080px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+.inner {
+  width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*  HEADER  */
+header {
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header .logo {
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .inner {
+  height: 200px;
+}
+header .sub-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  display: flex;
+}
+header .sub-menu ul.menu {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  list-style: none;
+}
+
+header .sub-menu ul.menu li {
+  position: relative;
+}
+
+header .sub-menu ul.menu li::before {
+  content: '';
+  width: 1px;
+  height: 25px;
+  background-color: #656565;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child:before {
+  display: none;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 30px;
+  padding: 11px 20px;
+  display: block;
+  color: #656565;
+}
+
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+/* HEADER 후보 2 */
+
+/* MAIN */
+.main {
+  background-color: #ccc;
+  height: 1650px;
+  width: 100%;
+  position: absolute;
+  top: 150px;
+  color: #000;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.visual {
+  margin-top: 120px;
+  background-image: url('');
+  background-position: center;
+}
+
+.visual .inner {
+  height: 646px;
+}
+
+.visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+/* FOOTER */

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button#btn1 {
+        background-color: white;
+      }
+      button#btn1:hover {
+        background-color: yellow;
+        cursor: grab;
+      }
+      button#btn1:active {
+        cursor: grabbing;
+      }
+      button:disabled {
+        cursor: wait;
+        /* 자동완성은 ctrl + space */
+        /* https://developer.mozilla.org/  */
+      }
+      a:any-link:active {
+        background-color: blue;
+        color: white;
+      }
+      a:any-link:hover {
+        color: green;
+      }
+      ::selection {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>으아아ㅏㅏ아ㅏ아ㅏ</h1>
+    <button id="btn1" onclick="
+    setTimeout(function() {
+      document.getElementsByTagName('h1')[0].innerHTML='<i>백종원<i/>찌개 레시피';
+        setTimeout(function() {
+          
+        })
+    })"></button>
+      버튼1
+    </button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3" , disabled>버튼3</button>
+    <a href="https://www.naver.com/" , style="font-size: 24px">네이버</a>
+  </body>
+</html>

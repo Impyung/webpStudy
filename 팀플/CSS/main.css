@@ -1,10 +1,11 @@
 /* COMMON */
 body {
-  height: 1080px;
+  height: 1800px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Roboto', sans-serif;
+  position: relative;
 }
 
 img {
@@ -82,7 +83,6 @@ header .sub-menu ul.menu li a {
 header .sub-menu ul.menu li a:hover {
   color: #000;
 }
-/* HEADER 후보 2 */
 
 /* MAIN */
 .main {
@@ -99,7 +99,7 @@ header .sub-menu ul.menu li a:hover {
 }
 
 .visual {
-  margin-top: 120px;
+  margin-top: 150px;
   background-image: url('');
   background-position: center;
 }
@@ -114,3 +114,29 @@ header .sub-menu ul.menu li a:hover {
   left: -10px;
 }
 /* FOOTER */
+
+.footer {
+  width: 100%;
+  height: 450px;
+  font-size: 25px;
+  color: #706e68;
+  background-color: #222;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer .useAPI {
+  margin-top: 15px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .GitHub {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}

@@ -1,11 +1,14 @@
 /* COMMON */
 body {
+  margin: 0;
+  padding: 0;
   height: 1800px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Roboto', sans-serif;
   position: relative;
+  color: #000;
 }
 
 img {
@@ -13,7 +16,7 @@ img {
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: inherit;
 }
 
 .inner {
@@ -27,7 +30,7 @@ ul {
 }
 
 header {
-  background-color: #f6f5f0;
+  background-color: #fff;
   border-bottom: 1px solid #c8c8c8;
   width: 100%;
   position: fixed;
@@ -40,7 +43,7 @@ header {
 
 header .header__contents {
   font-size: 50px;
-  width: 80%;
+  width: 70%;
   height: 200px;
   position: absolute;
   right: 0;
@@ -56,7 +59,7 @@ header .header__contents .header__contents__detail::before {
 }
 
 header .btnOutline {
-  width: 20%;
+  width: 30%;
   position: absolute;
   left: 0;
   height: 100%;
@@ -74,21 +77,40 @@ header .btnOutline #menuBtn {
   margin: auto;
 }
 
+#menuClBtn {
+  font-size: 75px;
+  width: 150px;
+  cursor: grab;
+  height: 75px;
+  position: relative;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+
 /* MENU */
 
 .project-menu {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  width: 500px;
-  background-color: bisque;
-  color: black;
+  width: 400px;
+  background-color: #fff;
   z-index: 3;
   position: fixed;
-  font-size: 35px;
+  font-size: 25px;
   line-height: 1.5;
-  top: 0;
   left: 0;
   display: none;
-  transition: 0.4s;
+}
+
+.project-menu .menu__contents .menu__ul .menu {
+  font-size: 45px;
+  padding-top: 35px;
+}
+
+.project-menu .menu__contents .menu__ul .menu__li {
+  padding: 35px 0;
+  font-size: 25px;
 }
 
 /* FOOTER */

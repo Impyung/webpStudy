@@ -4,16 +4,36 @@ function load() {
   let isDisplayed = false;
 
   if (isDisplayed) {
-    visible.style.opacity = '0';
-    setTimeout(() => {
-      visible.style.display = 'none';
-    }, 400);
+    gsap.to(visible, 0.4, {
+      opacity: 0,
+      display: 'none',
+    });
     isDisplayed = false;
   } else {
-    visible.style.display = 'block';
-    setTimeout(() => {
-      visible.style.opacity = '1';
-    }, 0);
+    gsap.to(visible, 0.4, {
+      opacity: 1,
+      display: 'block',
+    });
     isDisplayed = true;
+  }
+}
+
+function cl() {
+  const invisible = document.querySelector('.project-menu');
+
+  let isInvisible = false;
+
+  if (isInvisible) {
+    gsap.to(invisible, 0.4, {
+      opacity: 1,
+      display: 'block',
+    });
+    isInvisible = true;
+  } else {
+    gsap.to(invisible, 0.4, {
+      opacity: 0,
+      display: 'none',
+    });
+    isInvisible = false;
   }
 }
